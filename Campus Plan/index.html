@@ -1,110 +1,190 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>CampusPlan</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusPlan | SRMU</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>CampusPlan</h1>
-        <p>Plan your projects. Manage your work.</p>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">CampusPlan</div>
+        <p>Plan Better. Work Together. Achieve More.</p>
+        <span>SRMU Student Project Platform</span>
     </header>
 
-    <nav>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#projects">Projects</a>
+        <a href="#tasks">Tasks</a>
+        <a href="#team">Team</a>
         <a href="#about">About</a>
-        <a href="#projects">My Projects</a>
-        <a href="#tasks">Task List</a>
-        <a href="#future">Future Plans</a>
     </nav>
 
-    <h2 id="about">About CampusPlan</h2>
+    <main>
 
-    <p>
-        CampusPlan is a platform for students to plan
-        and manage their college projects.
-    </p>
+        <!-- Home -->
+        <section id="home" class="welcome">
+            <h1>Welcome to CampusPlan</h1>
+            <p>
+                Manage your college projects, organize your tasks
+                and work together with your teammates.
+            </p>
+            <a href="#projects" class="button">Explore Projects</a>
+        </section>
 
-    <p>
-        Students can organize tasks, manage deadlines
-        and work together on projects.
-    </p>
+        <!-- Dashboard -->
+        <section id="dashboard">
+            <h2>My Dashboard</h2>
+            <p class="section-intro">A quick overview of your work.</p>
 
-    <h2>Our Features</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3 id="projectCount">0</h3>
+                    <p>Total Projects</p>
+                </div>
 
-    <ul>
-        <li>Create and manage projects</li>
-        <li>Divide work into tasks</li>
-        <li>Set project deadlines</li>
-        <li>Track task status</li>
-    </ul>
+                <div class="stat-card">
+                    <h3 id="taskCount">0</h3>
+                    <p>Total Tasks</p>
+                </div>
 
-    <h2 id="projects">My Projects</h2>
+                <div class="stat-card">
+                    <h3 id="completedCount">0</h3>
+                    <p>Completed Tasks</p>
+                </div>
 
-    <div class="project-container">
+                <div class="stat-card">
+                    <h3 id="pendingCount">0</h3>
+                    <p>Pending Tasks</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="project">
-            <h3>Student Attendance System</h3>
-            <p>Manage student attendance records.</p>
-            <p><b>Status:</b> Planning</p>
-        </div>
+        <!-- Projects -->
+        <section id="projects">
+            <h2>My Projects</h2>
+            <p class="section-intro">
+                Create and manage your academic projects.
+            </p>
 
-        <div class="project">
-            <h3>Student Portfolio</h3>
-            <p>Display student details and skills.</p>
-            <p><b>Status:</b> Planning</p>
-        </div>
+            <form id="projectForm" class="form-box">
+                <h3>Create New Project</h3>
 
-        <div class="project">
-            <h3>CampusPlan</h3>
-            <p>Plan and manage college projects.</p>
-            <p><b>Status:</b> In Progress</p>
-        </div>
+                <label for="projectName">Project Name</label>
+                <input type="text" id="projectName"
+                    placeholder="Enter project name" required>
 
-    </div>
+                <label for="projectDescription">Project Description</label>
+                <textarea id="projectDescription"
+                    placeholder="Write a short description" required></textarea>
 
-    <h2 id="tasks">Sample Task List</h2>
+                <button type="submit" class="button">
+                    Add Project
+                </button>
+            </form>
 
-    <table>
-        <tr>
-            <th>Task</th>
-            <th>Deadline</th>
-            <th>Status</th>
-        </tr>
+            <div id="projectList" class="project-container"></div>
+        </section>
 
-        <tr>
-            <td>Design Homepage</td>
-            <td>To be decided</td>
-            <td>Completed</td>
-        </tr>
+        <!-- Tasks -->
+        <section id="tasks">
+            <h2>My Tasks</h2>
+            <p class="section-intro">
+                Add tasks and manage their status.
+            </p>
 
-        <tr>
-            <td>Create Project Cards</td>
-            <td>To be decided</td>
-            <td>In Progress</td>
-        </tr>
+            <form id="taskForm" class="form-box">
+                <h3>Add New Task</h3>
 
-        <tr>
-            <td>Add More Features</td>
-            <td>To be decided</td>
-            <td>Pending</td>
-        </tr>
-    </table>
+                <label for="taskName">Task Name</label>
+                <input type="text" id="taskName"
+                    placeholder="Enter task name" required>
 
-    <h2 id="future">Future Plans</h2>
+                <label for="taskDeadline">Deadline</label>
+                <input type="date" id="taskDeadline" required>
 
-    <ul>
-        <li>Add interactive features using JavaScript</li>
-        <li>Allow students to create their own projects</li>
-        <li>Add team collaboration features</li>
-        <li>Connect a database</li>
-    </ul>
+                <button type="submit" class="button">
+                    Add Task
+                </button>
+            </form>
 
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Deadline</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="taskList"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section id="team">
+            <h2>Team Collaboration</h2>
+            <p>
+                CampusPlan is designed to help SRMU students
+                plan academic projects and coordinate with
+                their teammates.
+            </p>
+
+            <div class="feature-container">
+                <div class="feature-card">
+                    <h3>Work Together</h3>
+                    <p>Organize project work with your classmates.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Share Responsibilities</h3>
+                    <p>Divide project work among team members.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Meet Deadlines</h3>
+                    <p>Keep track of important project dates.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about">
+            <h2>About CampusPlan</h2>
+
+            <p>
+                CampusPlan is a student project planning platform
+                designed for Shri Ramswaroop Memorial University
+                students.
+            </p>
+
+            <p>
+                Its purpose is to make academic project planning,
+                task management and teamwork easier for students.
+            </p>
+
+            <h3>Developed By</h3>
+            <p><strong>Sumit Pandey</strong></p>
+            <p>B.Tech CSE (AI & ML), SRMU</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
     <footer>
-        <p>CampusPlan | Full Stack Mini Project</p>
-        <p>Created by Sumit Pandey</p>
+        <h3>CampusPlan</h3>
+        <p>Student Project Planning Platform | SRMU</p>
+        <p>Developed by Sumit Pandey</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
