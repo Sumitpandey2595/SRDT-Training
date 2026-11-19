@@ -1,81 +1,297 @@
 
+/* General Design */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #f2f4f8;
+    margin: 0;
     font-family: Arial, sans-serif;
-    margin: 30px;
+    background-color: #f3f5f9;
     color: #333333;
 }
 
-header {
-    background-color: darkblue;
+/* Header */
+
+.header {
+    background-color: #142b52;
     color: white;
-    padding: 20px;
     text-align: center;
+    padding: 28px 15px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.header p {
+    margin: 8px 0;
+}
+
+.header span {
+    font-size: 13px;
+    color: #d6e2f5;
+}
+
+/* Navigation */
+
+.navbar {
+    background-color: #203d6b;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 15px;
+}
+
+.navbar a:hover {
+    color: #ffd166;
+}
+
+/* Main Sections */
+
+section {
+    background-color: white;
+    margin: 25px auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 1100px;
     border-radius: 8px;
 }
 
-header h1 {
-    margin-bottom: 5px;
+section h2 {
+    color: #142b52;
+    margin-top: 0;
 }
 
-nav {
-    background-color: white;
-    padding: 15px;
-    margin-top: 15px;
+.section-intro {
+    color: #666666;
+}
+
+/* Welcome Section */
+
+.welcome {
+    text-align: center;
+    background-color: #e5edfa;
+    padding: 55px 20px;
+}
+
+.welcome h1 {
+    color: #142b52;
+    font-size: 30px;
+}
+
+.welcome p {
+    line-height: 1.7;
+}
+
+/* Buttons */
+
+.button {
+    display: inline-block;
+    background-color: #203d6b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
     border-radius: 5px;
-}
-
-nav a {
-    color: darkblue;
     text-decoration: none;
-    margin-right: 20px;
+    cursor: pointer;
+    font-size: 15px;
 }
 
-h2 {
-    color: darkblue;
-    margin-top: 30px;
+.button:hover {
+    background-color: #31578e;
 }
+
+/* Dashboard Cards */
+
+.stats {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background-color: #eaf0fa;
+    padding: 18px;
+    border-radius: 7px;
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+}
+
+.stat-card h3 {
+    color: #203d6b;
+    font-size: 28px;
+    margin: 5px;
+}
+
+/* Forms */
+
+.form-box {
+    background-color: #f4f6fa;
+    padding: 20px;
+    border-radius: 7px;
+    margin: 20px 0;
+}
+
+.form-box h3 {
+    color: #203d6b;
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+textarea {
+    min-height: 75px;
+    resize: vertical;
+}
+
+.form-box button {
+    margin-top: 15px;
+}
+
+/* Project Cards */
 
 .project-container {
     display: flex;
+    flex-wrap: wrap;
     gap: 15px;
 }
 
-.project {
-    background-color: white;
-    padding: 15px;
-    margin: 10px 0;
+.project-card {
+    background-color: #f4f6fa;
     border: 1px solid #dddddd;
-    border-radius: 8px;
+    border-radius: 7px;
+    padding: 18px;
     flex: 1;
+    min-width: 220px;
 }
 
-.project h3 {
-    color: darkblue;
+.project-card h3 {
+    color: #203d6b;
+}
+
+.delete-button {
+    background-color: #b83232;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Task Table */
+
+.table-container {
+    overflow-x: auto;
 }
 
 table {
     width: 100%;
-    background-color: white;
     border-collapse: collapse;
+    margin-top: 15px;
+    background-color: white;
 }
 
 th, td {
-    border: 1px solid #cccccc;
+    border: 1px solid #dddddd;
     padding: 12px;
     text-align: left;
 }
 
 th {
-    background-color: darkblue;
+    background-color: #203d6b;
     color: white;
 }
 
+td select {
+    padding: 7px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+/* Team Cards */
+
+.feature-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background-color: #eaf0fa;
+    padding: 18px;
+    border-radius: 7px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.feature-card h3 {
+    color: #203d6b;
+}
+
+/* Footer */
+
 footer {
-    background-color: darkblue;
+    background-color: #142b52;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     margin-top: 30px;
-    border-radius: 5px;
+}
+
+/* Mobile Screen */
+
+@media (max-width: 650px) {
+
+    .navbar a {
+        display: inline-block;
+        margin: 7px;
+    }
+
+    section {
+        width: 94%;
+        padding: 18px;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .project-container {
+        flex-direction: column;
+    }
+
+    .feature-container {
+        flex-direction: column;
+    }
+
+    .welcome h1 {
+        font-size: 24px;
+    }
 }
