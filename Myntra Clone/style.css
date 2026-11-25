@@ -1,19 +1,17 @@
-/* ==========================================================================
-   MYNTRA 2.0 — E-COMMERCE STYLESHEET (CLEAN RETAIL UI)
-   ========================================================================== */
+
 
 :root {
-    --primary: #ff3f6c;            /* Myntra signature vibrant coral/pink */
+    --primary: #ff3f6c;            
     --primary-hover: #e02f5a;
     --primary-light: #fff1f4;
-    --dark: #282c3f;               /* High-contrast brand typography */
-    --text-muted: #696e79;         /* Subtitles and secondary info */
+    --dark: #282c3f;             
+    --text-muted: #696e79;        
     --text-light: #94969f;
-    --border-color: #eaeaec;       /* Clean subtle border */
+    --border-color: #eaeaec;      
     --border-light: #f5f5f6;
     --bg-page: #ffffff;
     --bg-subtle: #f9f9fa;
-    --green-discount: #03a685;     /* Retail offer & savings green */
+    --green-discount: #03a685;     
     --rating-star: #ff905a;
     --shadow-sm: 0 1px 4px rgba(40, 44, 63, 0.08);
     --shadow-md: 0 4px 16px rgba(40, 44, 63, 0.1);
@@ -25,7 +23,7 @@
     --transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-/* Base reset & typography */
+
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -61,9 +59,7 @@ input, select {
     font-family: inherit;
 }
 
-/* ==========================================================================
-   1. TOP ANNOUNCEMENT BAR
-   ========================================================================== */
+
 .top-announcement {
     background: #1e2029;
     color: #f5f5f6;
@@ -92,9 +88,7 @@ input, select {
     color: #4b5061;
 }
 
-/* ==========================================================================
-   2. MAIN HEADER & NAVIGATION
-   ========================================================================== */
+
 .main-header {
     position: sticky;
     top: 0;
@@ -404,9 +398,7 @@ input, select {
     color: var(--dark);
 }
 
-/* ==========================================================================
-   3. HERO CAROUSEL SECTION
-   ========================================================================== */
+
 .hero-section {
     position: relative;
     max-width: 1400px;
@@ -601,9 +593,7 @@ input, select {
     border-radius: 6px;
 }
 
-/* ==========================================================================
-   4. BANK & TRUST STRIP
-   ========================================================================== */
+
 .trust-strip {
     max-width: 1400px;
     margin: 24px auto 0;
@@ -646,9 +636,7 @@ input, select {
     color: var(--text-muted);
 }
 
-/* ==========================================================================
-   5. CATEGORY SECTION
-   ========================================================================== */
+
 .section {
     max-width: 1400px;
     margin: 40px auto;
@@ -729,9 +717,7 @@ input, select {
     color: var(--primary);
 }
 
-/* ==========================================================================
-   6. PRODUCTS CATALOG SECTION & MYNTRA-STYLE CARDS
-   ========================================================================== */
+
 .products-section {
     margin-top: 50px;
 }
@@ -1233,9 +1219,7 @@ input, select {
     margin: 0 auto;
 }
 
-/* ==========================================================================
-   9. SLIDE-OVER DRAWERS (CART & WISHLIST)
-   ========================================================================== */
+
 .drawer-backdrop,
 .modal-backdrop {
     position: fixed;
@@ -1545,9 +1529,7 @@ input, select {
     background: var(--primary-hover);
 }
 
-/* ==========================================================================
-   10. QUICK VIEW & CONFIRMATION MODALS
-   ========================================================================== */
+
 .quickview-modal {
     position: fixed;
     top: 50%;
@@ -1775,10 +1757,7 @@ input, select {
     transform: translateX(-50%) translateY(0);
 }
 
-/* ==========================================================================
-   12. RESPONSIVE DESIGN (TABLET & MOBILE)
-   ========================================================================== */
-@media (max-width: 1024px) {
+
     .category-grid {
         grid-template-columns: repeat(3, 1fr);
     }
